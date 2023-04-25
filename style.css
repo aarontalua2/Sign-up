@@ -6,9 +6,14 @@
 	margin: 0;
 }
 
+:root {
+	--ff-main: "MgaRegular";
+}
+
 body {
 	display: flex;
 	height: 100vh;
+	font-family: var(--ff-main);
 }
 
 .cover {
@@ -31,4 +36,14 @@ body {
 .content > * {
 	flex: 1;
 	outline: 1px solid black;
+}
+
+.intro {
+	display: flex;
+	align-items: flex-end;
+	padding: max(4rem, 20px);
+}
+
+.intro--text {
+	max-width: 75%;
 }
