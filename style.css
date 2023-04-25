@@ -8,6 +8,8 @@
 
 :root {
 	--ff-main: "MgaRegular";
+	--content-padding: max(4rem, 20px);
+	--color-accent: rgb(218, 238, 238);
 }
 
 body {
@@ -23,9 +25,9 @@ body {
 
 .content {
 	background: linear-gradient(
-		90deg,
-		rgba(255, 217, 0, 0.336),
-		rgb(168, 167, 167)
+		114deg,
+		rgb(252, 237, 115) 0%,
+		rgb(63, 72, 70) 100%
 	);
 	flex-basis: 65%;
 
@@ -35,15 +37,59 @@ body {
 
 .content > * {
 	flex: 1;
-	outline: 1px solid black;
 }
 
 .intro {
+	padding: var(--content-padding);
 	display: flex;
 	align-items: flex-end;
-	padding: max(4rem, 20px);
 }
 
 .intro--text {
 	max-width: 75%;
+}
+
+.form-container {
+	padding: var(--content-padding);
+	background: var(--color-accent);
+	flex-grow: 1.5;
+}
+
+.outro {
+	padding: var(--content-padding);
+	padding-top: 2rem;
+}
+
+.create-account {
+	height: 2.5rem;
+	width: 9rem;
+	font-size: 15px;
+	font-family: var(--ff-main);
+	border-width: 1px;
+	color: #fff;
+	border-color: #599bb3;
+	font-weight: bold;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	box-shadow: 0px 10px 14px -7px #276873;
+	text-shadow: 0px 1px 0px #3d768a;
+	background: #599bb3;
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+
+.create-account:hover {
+	background: #408c99;
+}
+
+.registered {
+	font-weight: bold;
+	font-size: larger;
+}
+
+.log-in {
+	text-decoration: none;
+	color: var(--color-accent);
 }
