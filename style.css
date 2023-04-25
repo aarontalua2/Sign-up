@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	height: 100vh;
+}
+
+.cover {
+	flex-basis: 35%;
+	background: black;
+}
+
+.content {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 217, 0, 0.336),
+		rgb(168, 167, 167)
+	);
+	flex-basis: 65%;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.content > * {
+	flex: 1;
+	outline: 1px solid black;
+}
