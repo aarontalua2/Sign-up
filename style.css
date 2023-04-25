@@ -8,7 +8,7 @@
 
 :root {
 	--ff-main: "MgaRegular";
-	--content-padding: max(4rem, 20px);
+	--left-padding: max(4rem, 20px);
 	--color-accent: rgb(218, 238, 238);
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 .intro {
-	padding: var(--content-padding);
+	padding: var(--left-padding);
 	display: flex;
 	align-items: flex-end;
 }
@@ -50,13 +50,15 @@ body {
 }
 
 .form-container {
-	padding: var(--content-padding);
+	padding: var(--left-padding);
 	background: var(--color-accent);
 	flex-grow: 1.5;
+	padding-top: 1.5rem;
+	padding-bottom: 1rem;
 }
 
 .outro {
-	padding: var(--content-padding);
+	padding: var(--left-padding);
 	padding-top: 2rem;
 }
 
