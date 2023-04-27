@@ -111,12 +111,16 @@ input {
 	border: none;
 	border-radius: 0.3rem;
 	padding: 0.5rem;
-	border: none;
 }
 
 input:focus,
 input:invalid {
 	border-bottom: 2px solid red;
+	transition: all 0.2s ease-in;
+}
+
+input:valid {
+	border-bottom: 3px solid rgb(39, 163, 39);
 	transition: all 0.2s ease-in;
 }
 
@@ -128,6 +132,10 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
+}
+
+.not-match {
+	color: red;
 }
 
 /* Outro */
