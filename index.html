@@ -49,7 +49,7 @@
 							type="text"
 							name="first-name"
 							id="first-name"
-							placeholder="Aaron"
+							placeholder="Your first name.."
 							required
 						/>
 					</div>
@@ -61,7 +61,7 @@
 							type="text"
 							name="last-name"
 							id="last-name"
-							placeholder="Talua"
+							placeholder="Your last name.."
 							required
 						/>
 					</div>
@@ -75,6 +75,7 @@
 							placeholder="you@example.com"
 							required
 						/>
+						<p class="hint">Please enter a valid email.</p>
 					</div>
 					<div class="form-item">
 						<label for="phone-number">Phone Number</label>
@@ -83,10 +84,11 @@
 							type="text"
 							name="phone-number"
 							id="phone-number"
-							pattern="[0-9]{11}"
+							pattern="(^09)[0-9]{9}"
 							placeholder="09xxxxxxxxx"
 							required
 						/>
+						<p class="hint">Please enter a valid Phone number.</p>
 					</div>
 					<div class="form-item">
 						<label for="password"
@@ -97,8 +99,10 @@
 							name="password"
 							id="password"
 							pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+							placeholder="Password123"
 							required
 						/>
+						<p class="hint">At least 1 uppercase, 1 lowercase, and 1 number.</p>
 					</div>
 					<div class="form-item">
 						<label for="confirm-password"
@@ -109,8 +113,10 @@
 							name="confirm-password"
 							id="confirm-password"
 							pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+							placeholder="Password123"
 							required
 						/>
+						<p class="hint">Passwords do not match.</p>
 					</div>
 				</form>
 			</div>

@@ -11,6 +11,7 @@
 	--left-padding: max(4rem, 20px);
 	--color-accent: rgb(225, 240, 140);
 	--color-accent-translucent: rgba(121, 147, 233, 0.596);
+	--color-invalid: rgb(255, 0, 0);
 }
 
 /* Main */
@@ -107,7 +108,7 @@ span.required {
 }
 
 input {
-	flex: 1;
+	flex-shrink: 0;
 	border: none;
 	border-radius: 0.3rem;
 	padding: 0.5rem;
@@ -115,7 +116,7 @@ input {
 
 input:focus,
 input:invalid {
-	border-bottom: 2px solid red;
+	border-bottom: 2px solid var(--color-invalid);
 	transition: all 0.2s ease-in;
 }
 
@@ -135,7 +136,12 @@ input::-webkit-inner-spin-button {
 }
 
 .not-match {
-	color: red;
+	color: var(--color-invalid);
+}
+
+.hint {
+	visibility: hidden;
+	color: var(--color-invalid);
 }
 
 /* Outro */
@@ -175,5 +181,5 @@ input::-webkit-inner-spin-button {
 
 .log-in {
 	text-decoration: none;
-	color: var(--color-accent);
+	color: rgb(206, 34, 34);
 }

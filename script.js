@@ -1,17 +1,33 @@
-const password = document.querySelector(`#password`);
-const confirmPassword = document.querySelector(`#confirm-password`);
-const passwordLabel = document.querySelector(`[for='confirm-password']`);
-const notMatchWarning = document.createElement("span");
-notMatchWarning.textContent = ` *Passwords do not match.`;
-notMatchWarning.classList.add("not-match");
+const formItems = document.querySelectorAll(`.form-item`);
+const password = document.querySelector('#password')
+const confirmPassword = document.querySelector(`#confirm-password`)
 
-const valueCheck = function (e) {
-	if (password.value != confirmPassword.value) {
-		passwordLabel.appendChild(notMatchWarning);
-		console.log("not match");
-	} else {
-		console.log("match");
-		passwordLabel.textContent = `Confirm Password`;
+
+
+formItems.forEach(item => {
+	const hasHint = item.querySelector(`.hint`)
+	if (hasHint) {
+		const hintedInput = item.querySelector('input');
+		
+		hintedInput.addEventListener('keyup', function(e) {
+			if (hintedInput.matches(':invalid') ){
+				item.querySelector('.hint').style.visibility = 'visible'
+			} else {
+				item.querySelector('.hint').style.visibility = 'hidden'
+			}
+		})
 	}
-};
-confirmPassword.addEventListener(`keyup`, valueCheck);
+
+});
+
+const validatePasswords = function(e) {
+	
+	if (password.value != confirmPassword.value) {
+		confirmPassword.nextElementSibling.style.visibility = 'visible'		
+	} else {
+		confirmPassword.nextElementSibling.style.visibility = 'hidden'
+	}
+}
+
+confirmPassword.addEventListener('keyup', validatePasswords)
+password.addEventListener('keyup', validatePasswords)
