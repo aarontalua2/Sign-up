@@ -15,7 +15,12 @@
 		/>
 	</head>
 	<body>
-		<section class="cover"></section>
+		<section class="cover">
+			<div class="logo-area">
+				<img class="logo" src="CK-logo.png" alt="CK-logo" />
+				<h1>CENTURY KNIGHTS TELETECH INC.</h1>
+			</div>
+		</section>
 		<section class="content">
 			<div class="intro">
 				<h2 class="intro--text">
@@ -29,59 +34,80 @@
 			<div class="form-container">
 				<h3 class="form--intro">Let's do this!</h3>
 
-				<form class="sign-up-form" name="sign-up-form" method="post">
+				<form class="sign-up-form" name="sign-up-form" action="#" method="post">
 					<div class="form-item">
-						<label for="first-name">First Name</label>
+						<label for="first-name"
+							><span class="required">*</span>First Name</label
+						>
 						<input
 							type="text"
 							name="first-name"
 							id="first-name"
 							placeholder="Aaron"
+							required
 						/>
 					</div>
 					<div class="form-item">
-						<label for="last-name">Last Name</label>
+						<label for="last-name"
+							><span class="required">*</span>Last Name</label
+						>
 						<input
 							type="text"
 							name="last-name"
 							id="last-name"
 							placeholder="Talua"
+							required
 						/>
 					</div>
 					<div class="form-item">
-						<label for="email">Email</label>
+						<label for="email"><span class="required">*</span>Email</label>
 						<input
 							type="email"
 							name="email"
 							id="email"
 							placeholder="you@example.com"
+							required
 						/>
 					</div>
 					<div class="form-item">
-						<label for="phone">Phone Number</label>
+						<label for="phone-number">Phone Number</label>
 						<input
+							class="phone-number"
 							type="number"
-							name="phone"
-							id="phone"
-							placeholder="09123456789"
+							name="phone-number"
+							id="phone-number"
+							placeholder="09xxxxxxxxx"
+							pattern="(\d{5}([\-]\d{4})?)"
 						/>
 					</div>
 					<div class="form-item">
-						<label for="password">Password</label>
-						<input type="password" name="password" id="password" />
+						<label for="password"
+							><span class="required">*</span>Password</label
+						>
+						<input
+							type="password"
+							name="password"
+							id="password"
+							pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+							required
+						/>
 					</div>
 					<div class="form-item">
-						<label for="confirm-password">Confirm Password</label>
+						<label for="confirm-password"
+							><span class="required">*</span>Confirm Password</label
+						>
 						<input
 							type="password"
 							name="confirm-password"
 							id="confirm-password"
+							pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+							required
 						/>
 					</div>
 				</form>
 			</div>
 			<div class="outro">
-				<button class="create-account">Create Account</button>
+				<button type="submit" class="create-account">Create Account</button>
 				<p class="registered">
 					Already have an account? <a class="log-in" href="#">Log in</a>
 				</p>

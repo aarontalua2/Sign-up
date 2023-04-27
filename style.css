@@ -8,10 +8,9 @@
 
 :root {
 	--ff-main: "MgaRegular";
-	--fc-light: rgb(236, 255, 182);
 	--left-padding: max(4rem, 20px);
-	--color-accent: rgb(218, 238, 238);
-	--color-accent-translucent: rgba(13, 61, 218, 0.342);
+	--color-accent: rgb(225, 240, 140);
+	--color-accent-translucent: rgba(121, 147, 233, 0.596);
 }
 
 /* Main */
@@ -25,14 +24,36 @@ body {
 .cover {
 	flex-basis: 35%;
 	background: black;
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	display: inline-block;
+	width: 35%;
+	margin-right: -4%;
+	mix-blend-mode: lighten;
+}
+
+.logo-area {
+	background: rgba(133, 133, 133, 0.288);
+	display: flex;
+	padding: 2rem;
+	align-items: center;
+	color: gold;
+	height: 10em;
+	width: 100%;
 }
 
 /* Content Area */
 .content {
 	background: linear-gradient(
-		114deg,
-		rgb(252, 237, 115) 0%,
-		rgb(63, 72, 70) 100%
+		135deg,
+		#bf953f,
+		#fcf6ba,
+		#b38728,
+		#fbf5b7,
+		#aa771c
 	);
 	flex-basis: 65%;
 
@@ -62,7 +83,6 @@ body {
 	flex-grow: 1.5;
 	padding-top: 1.5rem;
 	padding-bottom: 1rem;
-	color: var(--fc-light);
 
 	display: flex;
 	flex-direction: column;
@@ -84,11 +104,26 @@ body {
 	max-width: 28em;
 }
 
+span.required {
+	color: red;
+}
+
 input {
 	flex: 1;
 	border: none;
 	border-radius: 0.3rem;
 	padding: 0.5rem;
+	border: none;
+}
+
+input:invalid {
+	border-bottom: 2px solid red;
+	transition: all 0.3s ease;
+}
+
+input#password:invalid {
+	border-bottom: 2px solid red;
+	transition: all 0.3s ease;
 }
 
 input::-webkit-outer-spin-button,
