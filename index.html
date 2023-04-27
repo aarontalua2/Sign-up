@@ -34,7 +34,13 @@
 			<div class="form-container">
 				<h3 class="form--intro">Let's do this!</h3>
 
-				<form class="sign-up-form" name="sign-up-form" action="#" method="post">
+				<form
+					id="sign-up-form"
+					class="sign-up-form"
+					name="sign-up-form"
+					action="https://httpbin.org/post"
+					method="post"
+				>
 					<div class="form-item">
 						<label for="first-name"
 							><span class="required">*</span>First Name</label
@@ -73,11 +79,12 @@
 						<label for="phone-number">Phone Number</label>
 						<input
 							class="phone-number"
-							type="number"
+							type="text"
 							name="phone-number"
 							id="phone-number"
+							pattern="\d{11}"
 							placeholder="09xxxxxxxxx"
-							pattern="(\d{5}([\-]\d{4})?)"
+							required
 						/>
 					</div>
 					<div class="form-item">
@@ -107,7 +114,9 @@
 				</form>
 			</div>
 			<div class="outro">
-				<button type="submit" class="create-account">Create Account</button>
+				<button form="sign-up-form" type="submit" class="create-account">
+					Create Account
+				</button>
 				<p class="registered">
 					Already have an account? <a class="log-in" href="#">Log in</a>
 				</p>

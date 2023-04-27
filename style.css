@@ -30,13 +30,11 @@ body {
 
 .logo {
 	display: inline-block;
-	width: 35%;
-	margin-right: -4%;
-	mix-blend-mode: lighten;
+	height: 15vh;
 }
 
 .logo-area {
-	background: rgba(133, 133, 133, 0.288);
+	background: rgba(233, 216, 120, 0.288);
 	display: flex;
 	padding: 2rem;
 	align-items: center;
@@ -116,14 +114,14 @@ input {
 	border: none;
 }
 
+input:focus,
 input:invalid {
 	border-bottom: 2px solid red;
-	transition: all 0.3s ease;
+	transition: all 0.2s ease-in;
 }
 
-input#password:invalid {
-	border-bottom: 2px solid red;
-	transition: all 0.3s ease;
+input:focus-visible {
+	outline: none;
 }
 
 input::-webkit-outer-spin-button,
